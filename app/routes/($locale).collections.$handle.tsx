@@ -37,7 +37,7 @@ export async function loader({request, params, context}: LoaderFunctionArgs) {
 
   const seo = {
     title: `Hydrogen | ${collection.title ?? ''} Collection`,
-    description: collection.description
+    description: collection.description.slice(0, 152)
   }
 
   return json({collection, seo});
